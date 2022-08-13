@@ -1,4 +1,4 @@
-# Weather Forecaset
+# Weather Forecast
 A simple weather checker that allows a user to know a specific city's weather. Built using Vue3, Vuex, JS, Tailwind, OpenWeatherMap API and Auth0.
 
 ## Code editor

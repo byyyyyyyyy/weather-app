@@ -5,14 +5,18 @@ import store from "./store";
 import "./index.css";
 import { Icon } from "@iconify/vue";
 import { createAuth0 } from "@auth0/auth0-vue";
+import axios from "axios";
+
+//set base url for axios requests
+axios.defaults.baseURL = process.env.VUE_APP_WEATHER_API_URL;
 
 const app = createApp(App);
 
 app
   .use(
     createAuth0({
-      domain: "dev-cci9kch9.us.auth0.com",
-      client_id: "qoYjwflEV3Epy1N0kN3ty8N2DErmqJsx",
+      domain: process.env.VUE_APP_AUTH0_DOMAIN,
+      client_id: process.env.VUE_APP_AUTH0_CLIENT_ID,
       redirect_uri: window.location.origin,
     })
   )

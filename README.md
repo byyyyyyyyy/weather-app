@@ -3,7 +3,7 @@ A simple weather checker that allows a user to know a specific city's weather. B
 
 ## Code editor
 ```
-The recommened editor is VS code. 
+The recommened editor is VS code. You can still use other editors. 
 ```
 
 ## VS Code Plugins

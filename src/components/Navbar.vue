@@ -25,7 +25,6 @@ export default {
     ...mapMutations(["logout"]),
     async logout() {
       this.$auth0.logout({ returnTo: `${window.location.origin}/login` });
-      this.logout();
     },
   },
 };

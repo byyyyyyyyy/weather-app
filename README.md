@@ -42,6 +42,7 @@ proceeds to .env.production when .env is not present
 - `router` - contains the route navigation file
 - `store` - vuex store file (state management of the whole app)
 - `views` - contains all the views of the whole project.
+- `api` - abstraction for api calls
 
 
 ## Commands

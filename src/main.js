@@ -5,10 +5,6 @@ import store from "./store";
 import "./index.css";
 import { Icon } from "@iconify/vue";
 import { createAuth0 } from "@auth0/auth0-vue";
-import axios from "axios";
-
-//set base url for axios requests
-axios.defaults.baseURL = process.env.VUE_APP_WEATHER_API_URL;
 
 const app = createApp(App);
 

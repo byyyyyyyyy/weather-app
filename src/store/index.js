@@ -1,6 +1,6 @@
 import { createStore } from "vuex";
-import axios from "axios";
 import router from "@/router";
+import api from "@/api/api";
 export default createStore({
   state: {
     user: null,
@@ -29,13 +29,11 @@ export default createStore({
     },
   },
   actions: {
-    async fetchWeather({ commit, dispatch }, city) {
+    async fetchWeather({ commit }, city) {
       commit("setError", null);
       try {
-        const result = await axios.get(
-          `/weather?q=${city}&appid=${process.env.VUE_APP_WEATHER_API_KEY}`
-        );
-        commit("setWeather", result.data);
+        const result = await api.getWeather(city);
+        commit("setWeather", result);
         router.replace({ name: "weather", query: { city } });
       } catch (error) {
         commit("setError", error.response.data.message);
